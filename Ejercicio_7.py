@@ -1,16 +1,15 @@
 import math
 def corroborar_numero_step(numero_ingresado):
-    numero_ingresado  = str(numero_ingresado)
-    numero_modificado = numero_ingresado.replace(" ", "")
+    numero_modificado = int(str(numero_ingresado).replace(" ", ""))
     bandera = True
-    numero_modificado_entero = int(numero_modificado)
-    primer_digito = numero_modificado_entero // 10**(math.floor(math.log10(numero_modificado_entero)))
-    digito_anterior = primer_digito
-    for a in numero_modificado:
-        a = int(a)
+    primer_digito = numero_modificado // 10**(math.floor(math.log10(numero_modificado)))
+    numero_modificado_str = str(numero_modificado)
+    digito_anterior = int(numero_modificado_str[0])
+    for a in range(1, len(numero_modificado_str)):
+        valor_actual = int(numero_modificado_str[a]) 
         
-        if a + 1 == digito_anterior or a - 1 == digito_anterior:
-            digito_anterior = a
+        if valor_actual + 1 == digito_anterior or valor_actual - 1 == digito_anterior:
+            digito_anterior = valor_actual
             
         else:
             bandera = False
@@ -26,3 +25,5 @@ def corroborar_numero_step(numero_ingresado):
 
 a = input("Ingrese un numero: ")
 corroborar_numero_step(a)
+
+
