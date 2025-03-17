@@ -14,7 +14,8 @@ def cuenta_vocales(frase):
             cantidad_vocales += 1
     print("La cantidad de vocales de estra frase es: " , cantidad_vocales)
 
-frase_ingresada = input("Ingrese una frase: ")
-a = cuenta_vocales(frase_ingresada)
-print(a)
+if __name__ == "__main__":
+    frase_ingresada = input("Ingrese una frase: ")
+    a = cuenta_vocales(frase_ingresada)
+    print(a)
 

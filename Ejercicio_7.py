@@ -22,8 +22,8 @@ def corroborar_numero_step(numero_ingresado):
         
 
 
-
-a = input("Ingrese un numero: ")
-corroborar_numero_step(a)
+if __name__ == "__main__":
+    a = input("Ingrese un numero: ")
+    corroborar_numero_step(a)
 
 

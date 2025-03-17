@@ -6,6 +6,7 @@ def corroborar_palidromo(palabra_a_analizar):
     else:
         return "Esta palabra no es palidroma"
 
-palabra_ingresada = input("Ingrese una palabra PALINDROMA: ")
-a = corroborar_palidromo(palabra_ingresada)
-print(a)
+if __name__ == "__main__":
+    palabra_ingresada = input("Ingrese una palabra PALINDROMA: ")
+    a = corroborar_palidromo(palabra_ingresada)
+    print(a)
